@@ -1,5 +1,5 @@
 # KDataBinding
-Kotlin file to bind value and view.
+Kotlin single file library to bind value and view.
 
 ### How to use
 ````
