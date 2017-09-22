@@ -1,0 +1,13 @@
+*.iml
+build/
+*.apk
+app/build/
+local.properties
+.idea/
+.gradle/
+captures/
+*.DS_Store
+app/.DS_Store
+Update.apk2.zip
+Update.apk2/
+gradle.properties
