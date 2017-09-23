@@ -110,7 +110,7 @@ fun <T: View, R> T.bind(property: KProperty<R>, doWhat:T.(R?)-> Unit) {
     dataBinding.bindListener(this, todo)
 }
 
-fun <T: View, R1, R2> T.bind(p1: KProperty<R1>, p2: KProperty<R2>, doWhat: (R1?, R2?) -> Unit) {
+fun <T: View, R1, R2> T.bind(p1: KProperty<R1>, p2: KProperty<R2>, doWhat: T.(R1?, R2?) -> Unit) {
     val dataBinding1: KDataBinding<*, R1> = getBinding(p1)
     val dataBinding2: KDataBinding<*, R2> = getBinding(p2)
 
@@ -119,7 +119,7 @@ fun <T: View, R1, R2> T.bind(p1: KProperty<R1>, p2: KProperty<R2>, doWhat: (R1?,
     dataBinding2.bindListener(this, todo)
 }
 
-fun <T: View, R1, R2, R3> T.bind(p1: KProperty<R1>, p2: KProperty<R2>, p3: KProperty<R3>, doWhat: (R1?, R2?, R3?) -> Unit) {
+fun <T: View, R1, R2, R3> T.bind(p1: KProperty<R1>, p2: KProperty<R2>, p3: KProperty<R3>, doWhat: T.(R1?, R2?, R3?) -> Unit) {
     val dataBinding1: KDataBinding<*, R1> = getBinding(p1)
     val dataBinding2: KDataBinding<*, R2> = getBinding(p2)
     val dataBinding3: KDataBinding<*, R3> = getBinding(p3)
