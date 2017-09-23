@@ -8,6 +8,6 @@ TextView.bindText(Config::intValue)
 
 Config.hasNewVersion:Boolean = SharedPreferenceReadWriteProperty().canBeBind(this, this::hasNewVersion)
 ImageView.bind(Config::hasNewVersion) { bool ->
-  setImageResource(if(bool as Boolean) R.drawable.new : R.drawable.empty)
+  setImageResource(if(bool) R.drawable.new : R.drawable.empty)
 }
 ````
